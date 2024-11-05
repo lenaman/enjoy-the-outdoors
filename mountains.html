@@ -10,31 +10,41 @@
     <link rel="stylesheet" href="styles/customs.css" />
     <title>Mountains</title>
   </head>
-  <body>
-    <h1>Mountains</h1>
-    <header>
-      <a href="">
-        <img src="" alt="">
-      </a>
-      <nav></nav>
-      <a href=""> </a>
-    </header>
 
-    <main>
-      <select name="" id="mountains" onchange="filterByName();">
-        <option value="">Select...</option>
-      </select>
+  <body>
+    <h3>Mountains</h3>
+
+      <header>
+        </div>
+         <main class="container mt-4">
+         <form style="width: 20rem"></form>
+         <div class="mb-3">
+               <label class="form-label" for="mountainsDropdown">Mountains</label>
+         <select class="form-select" id="mountains" onchange="showMountainDetails();">
+                <option value="">Select...</option>
+         </select>
+        </div>
       
-    <section>
+
+    <section id="detailsSelection"></section>
       <div>
-        <input type="radio" name="filter" id="mountainName" onclick="toggleFilter()" />
+        <input type="radio" name="filter" id="mountainName" onclick="toggleFilter()" checked />
         <label for="mountainName">Mountain Name</label>
     
         <input type="radio" name="filter" id="stateLocation" onclick="toggleFilter()" />
         <label for="stateLocation">Effort Types</label>
     </div>
-    
     </section>
+
+    <div class="card" style="width: 18rem;">
+        <img src="images/default.png" class="card-img-top" alt="logo">
+        <div class="card-body">
+        <h5 id="cardHeading" class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
 
     </main>
     <script src="scripts/mountainData.js"></script>
