@@ -95,14 +95,14 @@ function filterByValue() {
     tableData6.innerText = parksFilter[i].Phone || "N/A";
 
     let tableData7 = tableRow.insertCell();
-    tableData7.innerText = parksFilter[i].Visit || "N/A";
+    tableData7.innerText = nationalParksArray[i].Visit || "N/A";
   }
 }
 
 // Handle radio button changes
 function stateFilter() {
   if (filterByStateRadio.checked) {
-     locations();
+    locations();
   } else {
     populateTypes();
   }
@@ -112,4 +112,3 @@ function stateFilter() {
 // Initial setup
 locations();
 getParkData();
-
