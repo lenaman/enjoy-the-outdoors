@@ -528,4 +528,3 @@ const mountainsArray = [
         },
     },
 ];
-

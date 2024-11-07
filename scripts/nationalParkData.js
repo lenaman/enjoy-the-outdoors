@@ -5,7 +5,7 @@ const filterByTypeRadio = document.getElementById("filterByType");
 
 // Initialize the locations dropdown
 function locations() {
-  fiftyStates.innerHTML = "<option value=''>Select a State</option>"; //Fine
+  fiftyStates.innerHTML = "<option value=''> --Select a State-- </option>"; //Fine
   for (let i = 0; i < locationsArray.length; i++) {
     let option = document.createElement("option");
     option.innerText = locationsArray[i];
@@ -16,7 +16,7 @@ function locations() {
 
 // Initialize park types dropdown
 function populateTypes() {
-  fiftyStates.innerHTML = "<option value=''>Select a Park Type</option>";
+  fiftyStates.innerHTML = "<option value=''>--Select a Park Type--</option>";
 
   for (let i = 0; i < parkTypesArray.length; i++) {
     let option = document.createElement("option");
@@ -33,19 +33,25 @@ function getParkData() {
     let tableRow = parksData.insertRow();
 
     let tableData = tableRow.insertCell();
-    tableData.innerText = nationalParksArray[i].LocationName;
+    tableData.innerText = nationalParksArray[i].LocationName || "N/A";
 
     let tableData2 = tableRow.insertCell();
-    tableData2.innerText = nationalParksArray[i].Address;
+    tableData2.innerText = nationalParksArray[i].Address || "N/A";
 
     let tableData3 = tableRow.insertCell();
-    tableData3.innerText = nationalParksArray[i].City;
+    tableData3.innerText = nationalParksArray[i].City || "N/A";
 
     let tableData4 = tableRow.insertCell();
-    tableData4.innerText = nationalParksArray[i].State;
+    tableData4.innerText = nationalParksArray[i].State || "N/A";
 
     let tableData5 = tableRow.insertCell();
-    tableData5.innerText = nationalParksArray[i].LocationID;
+    tableData5.innerText = nationalParksArray[i].ZipCode || "N/A";
+
+    let tableData6 = tableRow.insertCell();
+    tableData6.innerText = nationalParksArray[i].Phone || "N/A";
+
+    let tableData7 = tableRow.insertCell();
+    tableData7.innerText = nationalParksArray[i].Visit || "N/A";
   }
 }
 
@@ -71,19 +77,25 @@ function filterByValue() {
     let tableRow = parksData.insertRow();
 
     let tableData = tableRow.insertCell();
-    tableData.innerText = parksFilter[i].LocationName;
+    tableData.innerText = parksFilter[i].LocationName || "N/A";
 
     let tableData2 = tableRow.insertCell();
-    tableData2.innerText = parksFilter[i].Address;
+    tableData2.innerText = parksFilter[i].Address || "N/A";
 
     let tableData3 = tableRow.insertCell();
-    tableData3.innerText = parksFilter[i].City;
+    tableData3.innerText = parksFilter[i].City || "N/A";
 
     let tableData4 = tableRow.insertCell();
-    tableData4.innerText = parksFilter[i].State;
+    tableData4.innerText = parksFilter[i].State || "N/A";
 
     let tableData5 = tableRow.insertCell();
-    tableData5.innerText = parksFilter[i].LocationID;
+    tableData5.innerText = parksFilter[i].ZipCode || "N/A";
+
+    let tableData6 = tableRow.insertCell();
+    tableData6.innerText = parksFilter[i].Phone || "N/A";
+
+    let tableData7 = tableRow.insertCell();
+    tableData7.innerText = parksFilter[i].Visit || "N/A";
   }
 }
 
