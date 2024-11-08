@@ -1,0 +1,242 @@
+*body{margin: 0px;padding: 0px;box-sizing: border-box;}
+
+.navbar-toggler {
+outline: none;
+border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover,
+.navbar-toggler:active {
+outline: none;
+box-shadow: none;
+background: none;
+}
+/* .navbar-toggler{background-image: none !important;} */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+.offcanvas-header .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23FFFFFF' stroke-width='2' fill='none' d='M1.5 1.5l13 13M1.5 14.5L14.5 1.5'/%3e%3c/svg%3e");
+    border: none; /* Remove border if present */
+    background-color: transparent; /* Make sure background is transparent */
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 1; /* Ensure full visibility */
+}
+.nav-links:focus{color: white !important;}
+.navbar-brand img{width: 138px;}
+#offcanvasNavbar > div.offcanvas-header > a > img{width: 124px;}
+
+
+  /* Navbar links styling */
+
+ .nav-link:hover {
+    color: white;
+  }
+  /* hover effect of nav-link */
+  .nav-link {
+    position: relative;
+   /* Needed for positioning the pseudo-elements */
+    padding-bottom: 10px;
+   /* Add some space for the border effect */
+    overflow: hidden;
+   /* Prevents content overflow */
+    display: inline-block !important;
+    z-index: 3000;
+  }
+  .nav-link::before, .nav-link::after {
+    content: '';
+   /* Create pseudo-elements */
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+   /* Height of the border */
+    width: 0;
+   /* Start with 0 width */
+    background-color:white;
+   /* Use the variable color */
+    transition: width 0.4s ease;
+   /* Smooth transition for width */
+  }
+  .nav-link::before {
+    left: 50%;
+   /* Start in the center */
+  }
+  .nav-link::after {
+    right: 50%;
+   /* Start in the center */
+  }
+  .nav-link:hover::before, .nav-link:hover::after {
+    width: 50%;
+   /* Expand to full width on hover (50% each from center) */
+  }
+  .nav-link:hover::before {
+    left: 0;
+   /* Extend to the left on hover */
+  }
+  .nav-link:hover::after {
+    right: 0;
+   /* Extend to the right on hover */
+  }
+        .navbar>.container{padding: 10px 20px;}
+        .hero-section {
+            min-height: 100vh;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: -90px;
+            /* width: 100vw; */
+        }
+        .background-video {
+            position: absolute;
+            background-size: cover;
+            /* top: 0;
+            left: 0; */
+            width: 100%;
+            /* height: 100%; */
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .mission-img img{width: 100%;border-radius: 11px;}
+        .mission-right{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+        .mission-heading,
+        .about-heading,
+        .explore-heading {
+            text-align: center;
+            padding-block: 40px;
+        }
+        .container{padding: 50px 30px;}
+    /* .explore-nature{min-height: 500px;} */
+        /* section{padding: 50px 40px;} */
+        .site-button {
+    background-color: #411111;
+    color: #000;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 23px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.content-body{padding-block: 20px;}
+.footer-body p a{ text-decoration: none;color:#00c9b7 ;}
+        .about-img img{width: 100%;border-radius: 11px;}
+        .mountain-img img{width: 100%;border-radius: 11px;}
+        .park-img img{width: 100%;border-radius: 11px;}
+        .mission-right img,
+        .about-left img,
+        .explore .parks img,
+        .explore .mountain img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        /*==============-------------===================  */
+
+        .dropdown-menu[data-bs-popper] {
+            top: 100% !important ;
+        }
+
+
+/* Custom Scrollbar Styles */
+.custom-dropdown::-webkit-scrollbar {
+    width: 8px !important; /* Width of the scrollbar */
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb {
+    background-color:  #411111 !important; /* Custom color for the scrollbar thumb */
+    border-radius: 10px !important; /* Rounded corners for the thumb */
+}
+
+.custom-dropdown::-webkit-scrollbar-track {
+    background-color: #f0f0f0 !important; /* Background color for the scrollbar track */
+}
+.btn-custom{display: block;margin: auto;}
+/*  */
+/* Webpage Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px !important; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0 !important; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #411111 !important; /* Color of the scrollbar thumb */
+    border-radius: 10px !important; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #411111 !important; 
+}
+
+html {
+    scrollbar-width: thin !important; /* Width of the scrollbar */
+    scrollbar-color:  #411111 #f0f0f0 !important; /* Thumb color | Track color */
+}
+
+.was-validated .form-select:valid{border-color:#1e22f670 !important;background-image: none !important;}
+
+
+
+
+
+        /* Offcanvas Menu */
+        @media (max-width: 992px) {
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-collapse {
+                display: none;
+            }
+           #home-page .col-md-6{width: 100% !important;padding-block: 30PX !important;}
+           .mission-heading,
+        .about-heading,
+        .explore-heading {
+            text-align: center;padding: 0px !important;}
+          
+
+        }
+        .navbar-expand-lg{background-color: transparent;}
+        .nav-link{color: white;font-size: 17px;font-weight: 500;}
+        .offcanvas.show:not(.hiding), .offcanvas.showing {
+    transform: none;
+    background-color:#141526 ;
+}
+.mission-img img{width: 100%;border-radius: 11px;}
+.mission-right{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.mission-heading,
+.about-heading,
+.explore-heading {
+    text-align: center;
+    padding-block: 40px;
+}
+.container{padding: 50px 30px;}
+/* .explore-nature{min-height: 500px;} */
+/* section{padding: 50px 40px;} */
+.site-button {
+background-color: ;
+color: #000;
+border: none;
+padding: 10px 30px;
+border-radius: 23px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+text-decoration: none;
+

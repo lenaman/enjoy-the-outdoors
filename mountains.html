@@ -9,41 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <title>Mountains</title>
   </head>
-  <header class="header bg-black py-3">
-      <div class="container d-flex align-items-center justify-content-between">
-            <!-- Logo -->
-            <div class="logo">
-              <a href="#" class="text-white text-decoration-none header_logo">
-                <img src="images/logoipsum-330.svg" class="object-fit-cover w-100" alt="Logo">
-              </a>
-            </div>
-          <!-- Navigation Tabs -->
-            <nav>
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <a class="nav-link" id="index-home-tab" href="index.html" role="tab">Home</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="mountains-tab" href="mountains.html" role="tab">Mountains</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="national-parks-tab" href="national-parks.html" role="tab">Parks</a>
-                    </li>
-               </ul>
-            </nav>
-         </div>
-    </header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/logoipsum-330.svg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="national-parks.html">Parks</a></li>
+                <li class="nav-item"><a class="nav-link" href="mountains.html">Mountains</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+<section class="mountain-hero-section"></section>
+
   <main class="container mt-4">
     <h1>Mountains</h1>
   <!-- Mountain Dropdown -->
   <div class="dropwdown">
-      <label for="mountainDropdown" class="form-label">Choose a mountain:</label>
       <select id="mountainDropdown" class="form-select">
           <option value="">-- Select a Mountain --</option>
       </select>
   </div>  
 
-  <div class="card" style="width: 18rem;">
+  <div id="mountain-card" class="card" style="width: 18rem;">
     <img id="logoImage" src="images/Adams-StoryImage_2.jpg" class="card-img-top" alt="Mountain Image">
     <div class="card-body">
       <h5 id="cardTitleHeading" class="card-title">Mountain</h5>

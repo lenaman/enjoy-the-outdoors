@@ -32,26 +32,34 @@ function getParkData() {
   for (let i = 0; i < nationalParksArray.length; i++) {
     let tableRow = parksData.insertRow();
 
-    let tableData = tableRow.insertCell();
-    tableData.innerText = nationalParksArray[i].LocationName || "N/A";
+    let name = tableRow.insertCell();
+    name.innerText = nationalParksArray[i].LocationName || "N/A";
 
-    let tableData2 = tableRow.insertCell();
-    tableData2.innerText = nationalParksArray[i].Address || "N/A";
+    let address = tableRow.insertCell();
+    address.innerText = nationalParksArray[i].Address || "N/A";
 
-    let tableData3 = tableRow.insertCell();
-    tableData3.innerText = nationalParksArray[i].City || "N/A";
+    let city = tableRow.insertCell();
+    city.innerText = nationalParksArray[i].City || "N/A";
 
-    let tableData4 = tableRow.insertCell();
-    tableData4.innerText = nationalParksArray[i].State || "N/A";
+    let state = tableRow.insertCell();
+    state.innerText = nationalParksArray[i].State || "N/A";
 
-    let tableData5 = tableRow.insertCell();
-    tableData5.innerText = nationalParksArray[i].ZipCode || "N/A";
+    let zipCode = tableRow.insertCell();
+    zipCode.innerText = nationalParksArray[i].ZipCode || "N/A";
 
-    let tableData6 = tableRow.insertCell();
-    tableData6.innerText = nationalParksArray[i].Phone || "N/A";
+    let phone = tableRow.insertCell();
+    phone.innerText = nationalParksArray[i].Phone || "N/A";
 
-    let tableData7 = tableRow.insertCell();
-    tableData7.innerText = nationalParksArray[i].Visit || "N/A";
+    let websiteLink = tableRow.insertCell(); // Parent Element
+    if (nationalParksArray[i].Visit) {
+      let link = document.createElement("a"); // create a hyperlink element
+      link.href = nationalParksArray[i].Visit; // the href attribute is the actual URL 
+      link.innerText = nationalParksArray[i].Visit;
+      link.target = "_blank"; // optional: opens the link in a new tab
+      websiteLink.appendChild(link); // Here, the parent is the websiteLink cell, so you append the link to the cell
+    } else {
+      websiteLink.innerText = "N/A";
+    }
   }
 }
 
@@ -76,26 +84,35 @@ function filterByValue() {
   for (let i = 0; i < parksFilter.length; i++) {
     let tableRow = parksData.insertRow();
 
-    let tableData = tableRow.insertCell();
-    tableData.innerText = parksFilter[i].LocationName || "N/A";
+    let name = tableRow.insertCell();
+    name.innerText = parksFilter[i].LocationName || "N/A";
 
-    let tableData2 = tableRow.insertCell();
-    tableData2.innerText = parksFilter[i].Address || "N/A";
+    let address = tableRow.insertCell();
+    address.innerText = parksFilter[i].Address || "N/A";
 
-    let tableData3 = tableRow.insertCell();
-    tableData3.innerText = parksFilter[i].City || "N/A";
+    let city = tableRow.insertCell();
+    city.innerText = parksFilter[i].City || "N/A";
 
-    let tableData4 = tableRow.insertCell();
-    tableData4.innerText = parksFilter[i].State || "N/A";
+    let state = tableRow.insertCell();
+    state.innerText = parksFilter[i].State || "N/A";
 
-    let tableData5 = tableRow.insertCell();
-    tableData5.innerText = parksFilter[i].ZipCode || "N/A";
+    let zipCode = tableRow.insertCell();
+    zipCode.innerText = parksFilter[i].ZipCode || "N/A";
 
-    let tableData6 = tableRow.insertCell();
-    tableData6.innerText = parksFilter[i].Phone || "N/A";
+    let phone = tableRow.insertCell();
+    phone.innerText = parksFilter[i].Phone || "N/A";
 
-    let tableData7 = tableRow.insertCell();
-    tableData7.innerText = nationalParksArray[i].Visit || "N/A";
+    let websiteLink = tableRow.insertCell();
+
+    if (parksFilter[i].Visit) {
+      let link = document.createElement("a"); // create a link element
+      link.href = parksFilter[i].Visit; // the href attribute is the URL so that makes it blue
+      link.innerText = parksFilter[i].Visit;
+      link.target = "_blank"; // Optional: opens the link in a new tab
+      websiteLink.appendChild(link); // Here, the parent is the websiteLink cell, so you apoebd the link to the cell
+    } else {
+      websiteLink.innerText = "N/A";
+    }
   }
 }
 

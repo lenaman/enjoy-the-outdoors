@@ -5,6 +5,7 @@ const mountainDetailsParagraph = document.getElementById("mountainDetailsParagra
 const logoImage = document.getElementById("logoImage");
 const elevation = document.getElementById("elevationId");
 const cardTitleHeading = document.getElementById("cardTitleHeading");
+const mountainCard = document.getElementById("mountain-card");
 
 function loadMountains() {
   mountainsArray.forEach((mountain) => {
@@ -18,38 +19,17 @@ function loadMountains() {
 function showMountainDetails() {
   const mountainName = mountainDropdown.value;
   const selectedMountain = mountainsArray.find((mountain) => mountain.name === mountainName);
+
   if (selectedMountain) {
+    mountainCard.style.visibility = "visible";
     logoImage.src = `./images/${selectedMountain.img}`;
     cardTitleHeading.innerText = `${selectedMountain.name}`;
     elevation.innerText = `Elevation: ${selectedMountain.elevation} ft`;
     mountainDetailsParagraph.innerText = `${selectedMountain.desc} Effort: ${selectedMountain.effort}`;
+  } else {
+    mountainCard.style.visibility = "hidden";
   }
 }
+
 loadMountains();
 mountainDropdown.addEventListener("change", showMountainDetails);
-
-// function mountainDropdown() {
-//     for (let i = 0; i < mountainsArray.length; i++){
-//   for (const mountain of mountainsArray) {
-//     let option = document.createElement("option");
-//     option.value = mountain.name;
-//     option.textContent = mountain.name;
-//     mountainDropdown.appendChild(option)
-//         }
-//     }
-// }
-// loadMountains();
-
-// function showMountainDetails() {
-//   const mountainName = mountainDropdown.value;
-
-//   for (const mountain of mountainsArray) {
-//     if (mountainDropdown.name == mountainName) {
-//       logoImage.src = `./images/${mountainDropdown.img}`;
-//         cardTitleHeading.innerText = `Welcome to ${mountainDropdown.name} !`;
-//       const details = ` ${mountainDropdown.desc} Effort: ${mountainDropdown.effort}` ;
-//       mountainDetailsParagraph.innerText = details;
-//     }
-//   }
-// }
-// mountainDropdown.addEventListener("change", showMountainDetails);
