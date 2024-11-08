@@ -126,7 +126,7 @@ background: none;
     text-decoration: none;
 }
 .content-body{padding-block: 20px;}
-.footer-body p a{ text-decoration: none;color:#00c9b7 ;}
+.footer-body p a{ text-decoration: none;color:#47191e ;}
         .about-img img{width: 100%;border-radius: 11px;}
         .mountain-img img{width: 100%;border-radius: 11px;}
         .park-img img{width: 100%;border-radius: 11px;}
@@ -138,8 +138,8 @@ background: none;
             object-fit: cover;
         }
         .footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #4f7d66;
+            color: #103125;
             padding: 20px;
             text-align: center;
         }
